@@ -1,0 +1,38 @@
+<p>product-catalog works!</p>
+
+<table border="1" cellspacing="2" cellpadding="2" style="width: 400px; margin-bottom: 25px;">
+    <!-- Tiêu đề chung của toàn bộ bảng -->
+    <tr>
+        <td colspan="2">Ma Danh Muc</td>
+        <td colspan="2">Ten Danh Muc</td>
+    </tr>
+
+    <!-- Vòng lặp ngoài: Duyệt qua từng Danh mục -->
+    <tbody *ngFor="let c of categories">
+        
+        <!-- Hàng hiển thị Danh mục (Chỉ xuất hiện 1 lần cho mỗi danh mục) -->
+        <tr>
+            <td colspan="2">{{c.Cateid}}</td>
+            <td colspan="2">{{c.CateName}}</td>
+        </tr>
+
+        <!-- Tiêu đề cột cho sản phẩm thuộc danh mục này -->
+        <tr>
+            <td>Mã SP</td>
+            <td>Tên sản phẩm</td>
+            <td>Giá</td>
+            <td>Picture</td>
+        </tr>
+
+        <!-- Vòng lặp trong: Duyệt qua danh sách sản phẩm thuộc danh mục c -->
+        <tr *ngFor="let p of c.Products">
+            <td>{{p.ProductId}}</td>
+            <td>{{p.ProductName}}</td>
+            <td>{{p.Price}}</td>
+            <td>
+                <img [src]="p.Image" width="45px" height="45px" alt="{{p.ProductName}}">
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
