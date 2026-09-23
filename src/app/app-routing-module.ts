@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServiceProductImageEventDetail } from './service-product-image-event-detail/service-product-image-event-detail';
-import { ServiceProductImageEvent } from './service-product-image-event/service-product-image-event';
+import { ServiceProductImageEventDetail } from './Bai13/service-product-image-event-detail/service-product-image-event-detail';
+import { ServiceProductImageEvent } from './Bai13/service-product-image-event/service-product-image-event';
 
 const routes: Routes = [
   {path:'', redirectTo:'service-product-image-event', pathMatch:'full'},

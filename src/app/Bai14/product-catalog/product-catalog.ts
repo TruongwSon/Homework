@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CatalogService } from '../services/catalog-service';
+import { CatalogService } from '../../services/catalog-service';
 
 @Component({
   selector: 'app-product-catalog',
